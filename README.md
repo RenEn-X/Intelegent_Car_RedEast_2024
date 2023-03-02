@@ -1,4 +1,6 @@
-# opencv_project_for_intelegentcar
+# opencv_project_for_inteligentcar
+
+我知道我仓库打错了名字，但是这都是写无关紧要的小细节:)
 
 #### 介绍
 用于智能车比赛的opencv图像处理仿真软件
