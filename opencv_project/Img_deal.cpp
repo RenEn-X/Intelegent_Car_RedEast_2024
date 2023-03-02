@@ -713,7 +713,7 @@ void Left_Apex()
         return;
     }
     int pin, col_max = 0;
-    int row_flag, col_flag;
+    int row_flag = 0, col_flag = 0;
     for (pin = 0; pin < 240; pin++)
     {
         if (::left.Row[pin] == 254)

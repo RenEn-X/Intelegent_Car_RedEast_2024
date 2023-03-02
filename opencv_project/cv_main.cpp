@@ -2,6 +2,7 @@
 #include "load.h"
 
 int input, runing_flag = 1;
+int frame_delay;
 char input_str[1000];
 cv::String img_addr;
 
@@ -34,7 +35,9 @@ int main()
 			Read_folder(img_addr, 1);
 			break;
 		case 3:
-			Read_folder(folder, 1);
+			printf_s("请输入每张图片处理间隔（0为按下按键后才切换）\n");
+			std::cin >> frame_delay;
+			Read_folder(folder, frame_delay);
 			break;
 		case 4:
 			runing_flag = 0;
