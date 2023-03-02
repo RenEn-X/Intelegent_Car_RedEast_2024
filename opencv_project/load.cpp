@@ -1,7 +1,7 @@
 #include "load.h"
 
 uint8_t Imgdata[IMG_ROW][IMG_COL];//图片数据
-cv::String folder = "..\\Img_save";//默认播放文件夹的路径
+cv::String folder = "C:\\Users\\HammerTank\\Desktop\\Img_save";//默认播放文件夹的路径
 std::vector<cv::String> imagePathList;//存放图片的序列
 uint8_t img_error = 0;
 
@@ -58,7 +58,7 @@ void Imshow_Buffer2Mat()
 				location.x = j;
 				cv::circle(show, location, 0, cv::Scalar(255, 255, 255), -1);
 			}
-			if (Imgdata[i][j] == RED)
+			if (Imgdata[i][j] == BLUE)
 			{
 				location.y = i;
 				location.x = j;
@@ -70,7 +70,7 @@ void Imshow_Buffer2Mat()
 				location.x = j;
 				cv::circle(show, location, 0, cv::Scalar(0, 255, 0), -1);
 			}
-			if (Imgdata[i][j] == BLUE)
+			if (Imgdata[i][j] == RED)
 			{
 				location.y = i;
 				location.x = j;
