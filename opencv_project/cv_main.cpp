@@ -25,7 +25,7 @@ int main()
 			img_addr = input_str;
 			Imgread_Mat2Buffer(img_addr);
 			Imshow_Buffer2Mat();
-			cv::waitKey(1000);
+			cv::waitKey(0);
 			cv::destroyAllWindows();
 			break;
 		case 2:

@@ -69,5 +69,6 @@ typedef enum
 #define BLUE     254
 
 void ImageDeal_main();
+void reset_staus();
 
 #endif // !IMG_DEAL_

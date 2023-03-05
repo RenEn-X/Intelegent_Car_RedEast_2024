@@ -46,6 +46,7 @@ void Imshow_Buffer2Mat()
 	{
 		for (j = 0; j < IMG_COL; j++)
 		{
+
 			if (Imgdata[i][j] == BLACK)
 			{
 				location.y = i;
@@ -96,6 +97,7 @@ void Read_folder(cv::String folder_addr,int FramTime)
 		Imshow_Buffer2Mat();
 		cv::waitKey(FramTime);
 	}
+	reset_staus();
 	cv::waitKey(1000);
 	cv::destroyAllWindows();
 }

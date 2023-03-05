@@ -200,6 +200,17 @@ void Deal_Init()
     BinaryImage(Imgdata, Thresho);
 }
 
+void reset_staus()
+{
+    element_flag = NO_JUGED;
+    Fork_Flag = NO_FORK;
+    T_flag = NO_T;
+    Garage_flag = GET_OUT;
+    Roundabout_flag = NO_ROUND;
+    Roundabout_flag_position = NOROUND;
+    ramp_flag = NO_RAMP;
+}
+
 void InitData() //初始化边界线
 {
     int pin;
