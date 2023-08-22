@@ -8,8 +8,9 @@ cv::String img_addr;
 
 int main()
 {
+	ImagePerspective_Init();
 	while (runing_flag)
-	{
+	{ 
 		printf_s("这是基于opencv开发的一个仿真代码\n");
 		printf_s("请输入数字以进行你想要进行的操作\n");
 		printf_s("1、处理单张图片\n");

@@ -6,61 +6,6 @@
 #include "load.h"
 using namespace std;
 
-typedef enum
-{
-    NO_JUGED,
-    IN_JUGED,
-}ALL_enum;//ËùÓĞÔªËØ±êÖ¾Î»
-
-typedef enum
-{
-    NO_FORK,
-    IN_FORK,
-}FORK_enum;//Èı²æ
-
-typedef enum
-{
-    NO_T,
-    IN_T,
-    T_READY,
-}T_CONNER_enum;//TÍä
-
-typedef enum
-{
-    GET_OUT,
-    FIRST,
-    READY,
-    GET_IN,
-    NO_GARAGE,
-}Garage_enmum;//³µ¿â
-
-typedef enum
-{
-    ROUND_READY,
-    GET_IN_READY,
-    GET_IN_ROUND,
-    IN_ROUND,
-    GET_OUT_ROUND,
-    OUTTING,
-    OUT_WAY,
-    OUT_ROUND,
-    NO_ROUND,
-}Roundabout_enmum;//»·µº
-
-typedef enum
-{
-    ROUND_L,
-    ROUND_R,
-    NOROUND,
-}Roundabout_position_enmum;//»·µº
-
-typedef enum
-{
-    NO_RAMP,
-    RAMP_READY,
-    IN_RAMP,
-}Ramp_enmum;//»·µº
-
 
 #define WHITE    255      
 #define BLACK    0        
@@ -68,7 +13,13 @@ typedef enum
 #define GREEN    100
 #define BLUE     254
 
-void ImageDeal_main();
-void reset_staus();
+#define RESULT_ROW 120 // ç»“æœå›¾è¡Œåˆ—
+#define RESULT_COL 188
+#define USED_ROW 120 // ç”¨äºé€è§†å›¾çš„è¡Œåˆ—
+#define USED_COL 188
+extern uint8_t PerImg[RESULT_ROW][RESULT_COL];
+void ImagePerspective_Init(void);
+void ImageDeal_main(void);
+void reset_staus(void);
 
 #endif // !IMG_DEAL_

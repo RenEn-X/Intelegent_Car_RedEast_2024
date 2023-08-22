@@ -1,7 +1,8 @@
 #include "load.h"
 
 uint8_t Imgdata[IMG_ROW][IMG_COL];//图片数据
-cv::String folder = "C:\\Users\\HammerTank\\Desktop\\Img_save";//默认播放文件夹的路径
+#define showImg PerImg
+cv::String folder = "C:\\Users\\luyizhong\\Desktop\\img";//默认播放文件夹的路径
 std::vector<cv::String> imagePathList;//存放图片的序列
 uint8_t img_error = 0;
 
@@ -37,6 +38,7 @@ void Imgread_Mat2Buffer(cv::String addr)
  * 后续需要添加处理部分显示彩色标注
  * @返回 {*}
  */
+
 void Imshow_Buffer2Mat()
 {
 	int i, j;
@@ -46,36 +48,30 @@ void Imshow_Buffer2Mat()
 	{
 		for (j = 0; j < IMG_COL; j++)
 		{
-
-			if (Imgdata[i][j] == BLACK)
+			location.y = i;
+			location.x = j;
+			if (showImg[i][j] == BLACK)
 			{
-				location.y = i;
-				location.x = j;
 				cv::circle(show, location, 0, cv::Scalar(0, 0, 0), -1);
 			}
-			if (Imgdata[i][j] == WHITE)
+			if (showImg[i][j] == WHITE)
 			{
-				location.y = i;
-				location.x = j;
 				cv::circle(show, location, 0, cv::Scalar(255, 255, 255), -1);
 			}
-			if (Imgdata[i][j] == BLUE)
+			if (showImg[i][j] == BLUE)
 			{
-				location.y = i;
-				location.x = j;
 				cv::circle(show, location, 0, cv::Scalar(255, 0, 0), -1);
 			}
-			if (Imgdata[i][j] == GREEN)
+			if (showImg[i][j] == GREEN)
 			{
-				location.y = i;
-				location.x = j;
 				cv::circle(show, location, 0, cv::Scalar(0, 255, 0), -1);
 			}
-			if (Imgdata[i][j] == RED)
+			if (showImg[i][j] == RED)
 			{
-				location.y = i;
-				location.x = j;
 				cv::circle(show, location, 0, cv::Scalar(0, 0, 255), -1);
+			}
+			else {
+				cv::circle(show, location, 0, cv::Scalar(showImg[i][j],showImg[i][j], showImg[i][j]), -1);
 			}
 		}
 	}
