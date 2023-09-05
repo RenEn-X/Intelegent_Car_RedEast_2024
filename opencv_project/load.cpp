@@ -2,7 +2,7 @@
 
 uint8_t Imgdata[IMG_ROW][IMG_COL];//图片数据
 #define showImg PerImg
-cv::String folder = "C:\\Users\\luyizhong\\Desktop\\img";//默认播放文件夹的路径
+cv::String folder = "F:\\Desktop\\smart_car\\image\\img0";//默认播放文件夹的路径
 std::vector<cv::String> imagePathList;//存放图片的序列
 uint8_t img_error = 0;
 
